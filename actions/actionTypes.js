@@ -1,0 +1,3 @@
+export const FETCH_COMMENT = 'FETCH_COMMENT';
+export const FETCH_STORY = 'FETCH_STORY';
+export const FETCH_TOP_STORIES = 'FETCH_TOP_STORIES';
