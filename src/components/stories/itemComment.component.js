@@ -12,16 +12,18 @@ export const ItemComment = ({
         <Icon name='user circle' color='orange'></Icon>
       </Feed.Label>
       <Feed.Content style={{fontSize: '90%'}}>
-      <Feed.Date>{ moment(time * 1000).calendar() }</Feed.Date>
         <Feed.Summary>
           by <a>{ by }</a>
+          <Feed.Date>
+            { moment(time * 1000).calendar() }
+          </Feed.Date>
         </Feed.Summary>
-        <Feed.Extra text content={ text }>
+        <Feed.Extra text>
           { renderHTML(String(text)) }
         </Feed.Extra>
         <Feed.Extra text>
           { comments && comments.length > 0  && comments.map(comment => (
-            <ItemComment comment={ comment }></ItemComment>
+            <ItemComment key={ comment.id } comment={ comment }></ItemComment>
           ))}
         </Feed.Extra>
       </Feed.Content>

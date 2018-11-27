@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create ItemComment 1`] = `
+<Feed>
+  <FeedEvent>
+    <FeedLabel>
+      <Icon
+        as="i"
+        color="orange"
+        name="user circle"
+      />
+    </FeedLabel>
+    <FeedContent
+      style={
+        Object {
+          "fontSize": "90%",
+        }
+      }
+    >
+      <FeedSummary>
+        by 
+        <a>
+          zellyn
+        </a>
+        <FeedDate>
+          Today at 11:46 AM
+        </FeedDate>
+      </FeedSummary>
+      <FeedExtra
+        text={true}
+      >
+        You can do merkle-tree-signing and other clever things with cryptography to provide auditability without needing any kind of distributed consensus via proof of work/stake/etc. so I think the flowchart could have a couple more "No" branches.
+      </FeedExtra>
+      <FeedExtra
+        text={true}
+      >
+        <ItemComment
+          comment={
+            Object {
+              "by": "pythonaut_16",
+              "comments": Array [
+                Object {
+                  "by": "beaconstudios",
+                  "comments": Array [
+                    Object {
+                      "by": "zellyn",
+                      "id": 18544030,
+                      "parent": 18543960,
+                      "text": "<a href=\\"https:&#x2F;&#x2F;twitter.com&#x2F;whitequark&#x2F;status&#x2F;946886702932557824\\" rel=\\"nofollow\\">https:&#x2F;&#x2F;twitter.com&#x2F;whitequark&#x2F;status&#x2F;946886702932557824</a><p><a href=\\"https:&#x2F;&#x2F;twitter.com&#x2F;hikari_no_yume&#x2F;status&#x2F;933791331146784768\\" rel=\\"nofollow\\">https:&#x2F;&#x2F;twitter.com&#x2F;hikari_no_yume&#x2F;status&#x2F;933791331146784768</a><p>More seriously, some people apparently consider git a blockchain: <a href=\\"https:&#x2F;&#x2F;medium.com&#x2F;@shemnon&#x2F;is-a-git-repository-a-blockchain-35cb1cd2c491\\" rel=\\"nofollow\\">https:&#x2F;&#x2F;medium.com&#x2F;@shemnon&#x2F;is-a-git-repository-a-blockchain...</a>",
+                      "time": 1543337898,
+                      "type": "comment",
+                    },
+                  ],
+                  "id": 18543960,
+                  "kids": Array [],
+                  "parent": 18543917,
+                  "text": "what you&#x27;re describing is a Merkle tree. Blockchains are essentially Merkle trees with a distributed consensus algorithm. Take away the consensus algorithm and you&#x27;re back to Merkle trees.",
+                  "time": 1543337577,
+                  "type": "comment",
+                },
+              ],
+              "id": 18543917,
+              "kids": Array [],
+              "parent": 18543884,
+              "text": "Doesn&#x27;t that somewhat depend on how you define a blockchain? Blockchain doesn&#x27;t inherently require proof of work&#x2F;stake&#x2F;etc, just a chain where each block contains a hash of the previous block(s). Proof of work&#x2F;stake just happens to be a popular implementation detail because of cryptocurrencies.",
+              "time": 1543337353,
+              "type": "comment",
+            }
+          }
+          key="18543917"
+        />
+      </FeedExtra>
+    </FeedContent>
+  </FeedEvent>
+</Feed>
+`;

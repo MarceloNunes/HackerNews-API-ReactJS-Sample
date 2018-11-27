@@ -26,7 +26,7 @@ const addStories = async topStoriesIds => {
 
 const fetchItem = async id => {
   const response = await axios.get(config.baseUrl + '/item/' + id + '.json');
-  return response.data;
+  return response && response.data;
 };
 
 const addComments = async story => {
@@ -38,7 +38,7 @@ const addComments = async story => {
     while (count < 20 && item.kids && item.kids.length > 0) {
       const subItem = await fetchItem(item.kids.shift());
 
-      if (!subItem.deleted && !subItem.dead) {
+      if (subItem && !subItem.deleted && !subItem.dead) {
         item.comments.push(subItem);
         count++;
 

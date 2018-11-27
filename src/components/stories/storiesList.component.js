@@ -44,7 +44,7 @@ export class StoriesList extends React.Component {
         <List relaxed='very' divided style={{ marginBottom: '24px' }}>
           {
             this.props.stories && this.props.stories.map(story => (
-              <StoryListItem story={ story } />
+              <StoryListItem key={ story.id } story={ story } />
             ))
           }
         </List>

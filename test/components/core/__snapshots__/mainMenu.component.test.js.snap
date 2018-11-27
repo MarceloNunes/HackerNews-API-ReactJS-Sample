@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create the Main Menu bar 1`] = `
+<Menu
+  color="orange"
+  fixed="top"
+  inverted={true}
+>
+  <Container>
+    <MenuItem
+      as="a"
+      header={true}
+    >
+      <Icon
+        as="i"
+        inverted={true}
+        name="hacker news"
+        size="big"
+      />
+      HackerNews API ReactJS Sample
+    </MenuItem>
+  </Container>
+</Menu>
+`;

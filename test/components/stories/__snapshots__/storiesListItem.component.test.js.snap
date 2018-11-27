@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create StoryListItem 1`] = `
+<ListItem>
+  <ListContent
+    floated="left"
+  >
+    <Feed>
+      <FeedEvent>
+        <FeedContent>
+          <FeedSummary>
+            by 
+            <a>
+              alanfranzoni
+            </a>
+            <FeedDate>
+              Today at 11:05 AM
+            </FeedDate>
+          </FeedSummary>
+          <FeedExtra
+            text={true}
+          >
+            <h4>
+              <a
+                href="https://imgur.com/a/RlUj9Ed"
+                target="_blank"
+              >
+                NIST's answer to “Do you need a blockchain?”
+              </a>
+            </h4>
+          </FeedExtra>
+          <FeedMeta>
+            <FeedLike
+              as="a"
+            >
+              <Icon
+                as="i"
+                color="blue"
+                name="thumbs up outline"
+              />
+              59
+               Points    
+              <Icon
+                as="i"
+                color="orange"
+                name="user circle"
+              />
+                
+              14
+               Comments
+            </FeedLike>
+          </FeedMeta>
+        </FeedContent>
+      </FeedEvent>
+    </Feed>
+  </ListContent>
+  <ListContent
+    floated="right"
+  >
+    <Button
+      as="button"
+      basic={true}
+      color="orange"
+      disabled={false}
+      onClick={[Function]}
+      role="button"
+      style={
+        Object {
+          "fontSize": "80%",
+          "padding": "12px",
+        }
+      }
+    >
+      <span>
+        View Comments
+      </span>
+    </Button>
+  </ListContent>
+</ListItem>
+`;

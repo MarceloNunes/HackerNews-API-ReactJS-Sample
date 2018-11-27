@@ -65,7 +65,7 @@ export class StoryListItem extends React.Component {
         { this.state.viewComment && this.props.story.comments && this.props.story.comments.length > 0 &&
           <List.Content style={{ paddingTop: '12px' }} floated='left'>
             { this.props.story.comments.map(comment => (
-              <ItemComment comment={comment}></ItemComment>
+              <ItemComment key={ comment.id } comment={ comment }></ItemComment>
             ))}
           </List.Content>
         }

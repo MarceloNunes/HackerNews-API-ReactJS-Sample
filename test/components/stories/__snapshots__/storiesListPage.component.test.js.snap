@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should create StoriesList page 1`] = `
+<div>
+  <MainMenu />
+  <Connect(StoriesList) />
+</div>
+`;
