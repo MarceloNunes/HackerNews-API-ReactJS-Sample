@@ -22,3 +22,8 @@ $ npm start
 ```
 
 Finally, point your browser to [http://localhost:3030/](http://localhost:3030/) to open the application.
+
+## Live application
+
+If you are don't want to install it, you can check out this aplication running live on Heroku here: 
+(https://hackernews-reactjs-sample.herokuapp.com/)[https://hackernews-reactjs-sample.herokuapp.com/]
