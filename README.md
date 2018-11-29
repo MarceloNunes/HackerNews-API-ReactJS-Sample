@@ -26,4 +26,4 @@ Finally, point your browser to [http://localhost:3030/](http://localhost:3030/) 
 ## Live application
 
 If you are don't want to install this application on your local computer, you can check out this aplication running live on Heroku here: 
-[https://hackernews-reactjs-sample.herokuapp.com/]
+[https://hackernews-reactjs-sample.herokuapp.com/](https://hackernews-reactjs-sample.herokuapp.com/)
