@@ -13,12 +13,12 @@ For the reference of the HackerNews REST API go to [https://github.com/HackerNew
 To install this application, first make sure you have [Node.js](https://nodejs.org/en/) properly installed on your system. Then open a bash command line and run the following commands.
 
 ```
-$ git clone git@github.com:MarceloNunes/HackerNews-API-ReactJS-Sample.git
-$ cd HackerNews-API-ReactJS-Sample/
-$ npm install
-$ npm run build
-$ npm run test
-$ npm start
+git clone git@github.com:MarceloNunes/HackerNews-API-ReactJS-Sample.git
+cd HackerNews-API-ReactJS-Sample/
+npm install
+npm run build
+npm run test
+npm start
 ```
 
 Finally, point your browser to [http://localhost:3030/](http://localhost:3030/) to open the application.
