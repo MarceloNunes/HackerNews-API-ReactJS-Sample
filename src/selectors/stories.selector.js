@@ -47,7 +47,7 @@ const addComments = async story => {
         }
       }
     }
-  }
+  };
 
   return addSubComments(story);
 };

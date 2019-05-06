@@ -1,4 +1,4 @@
-import { fetchTopStoriesAction } from '../../src/actions/stories.actions';
+import {fetchTopStoriesAction} from '../../src/actions/stories.actions';
 
 test('should set up fetchTopStoriesAction action object with provided values', () => {
   const storiesData = [{

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createStore, applyMiddleware } from 'redux';
+import {createStore, applyMiddleware} from 'redux';
 import thunk from 'redux-thunk';
-import { Provider } from 'react-redux';
+import {Provider} from 'react-redux';
 
 import AppRouter from './routers/app.router';
 import rootReducer from './reducers/root.reducer';
@@ -13,7 +13,7 @@ const store = createStore(rootReducer, applyMiddleware(thunk));
 
 const jsx = (
   <Provider store={store}>
-    <AppRouter />
+    <AppRouter/>
   </Provider>
 );
 

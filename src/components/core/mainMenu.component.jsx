@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Container, Icon } from 'semantic-ui-react'
+import {Menu, Container, Icon} from 'semantic-ui-react';
 
 export const MainMenu = () => (
   <Menu fixed='top' inverted color='orange'>

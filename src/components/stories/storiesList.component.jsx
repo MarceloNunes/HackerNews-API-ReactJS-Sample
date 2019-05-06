@@ -1,8 +1,5 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { StoryListItem } from './storyListItem.component';
-
-import { fetchTopStories } from '../../selectors/stories.selector';
+import {connect} from 'react-redux';
 
 import {
   Container,
@@ -10,6 +7,10 @@ import {
   List,
   Loader,
 } from 'semantic-ui-react';
+
+import {StoryListItem} from './storyListItem.component';
+import {fetchTopStories} from '../../selectors/stories.selector';
+
 
 const mapDispatchToProps = (dispatch) => ({
   onLoadTopStories: () => dispatch(fetchTopStories())
@@ -25,33 +26,39 @@ export class StoriesList extends React.Component {
   };
 
   componentDidMount() {
-    this.props.onLoadTopStories()
+    const {onLoadTopStories} = this.props;
+    onLoadTopStories()
       .then(() => this.setState(prevState => Object.assign(prevState, {
         loading: false
       })));
   }
 
   render() {
+    const {state, props} = this;
+    const {stories} = props;
+    const {loading} = state;
+
     return (
-      <Container text style={{ marginTop: '5em' }}>
-        { this.state.loading &&
+      <Container text style={{marginTop: '5em'}}>
+        {loading && (
           <Dimmer page active inverted>
             <Loader
               content='Loading'
-              size='big' />
+              size='big'
+            />
           </Dimmer>
-        }
-        <List relaxed='very' divided style={{ marginBottom: '24px' }}>
+        )}
+        <List relaxed='very' divided style={{marginBottom: '24px'}}>
           {
-            this.props.stories && this.props.stories.map(story => (
-              <StoryListItem key={ story.id } story={ story } />
+            stories && stories.map(story => (
+              <StoryListItem key={story.id} story={story}/>
             ))
           }
         </List>
       </Container>
     );
   }
-};
+}
 
 export default connect(
   mapStateToProps,

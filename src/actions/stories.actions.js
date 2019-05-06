@@ -6,5 +6,5 @@ export const fetchTopStoriesAction = stories => {
   return {
     type: FETCH_TOP_STORIES,
     stories
-  }
+  };
 };
