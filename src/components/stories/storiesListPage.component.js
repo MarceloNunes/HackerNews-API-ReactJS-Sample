@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainMenu } from '../core/mainMenu.component';
-import {StoriesList} from './storiesList.component';
+import StoriesList from './storiesList.component';
 
 export const StoriesListPage = () => (
   <div>

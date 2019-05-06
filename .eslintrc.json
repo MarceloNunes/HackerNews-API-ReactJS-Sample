@@ -39,11 +39,13 @@
         "no-console": "off",
         "react/prop-types": 0,
         "react/jsx-tag-spacing": "off",
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
         "jest/no-disabled-tests": "warn",
         "jest/no-focused-tests": "error",
         "jest/no-identical-title": "error",
         "jest/prefer-to-have-length": "warn",
         "jest/valid-expect": "error",
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "import/no-named-as-default": "off"
     }
 }

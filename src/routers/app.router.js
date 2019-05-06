@@ -1,7 +1,7 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 
-import {StoriesListPage} from '../components/stories/storiesListPage.component';
+import StoriesListPage from '../components/stories/storiesListPage.component';
 
 const AppRouter = () => (
   <BrowserRouter>

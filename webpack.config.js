@@ -5,7 +5,7 @@ module.exports = (env) => {
   const isProduction = env === 'production';
 
   return {
-    entry: ['babel-polyfill', './src/app.jsx'],
+    entry: ['babel-polyfill', './src/app.js'],
     output: {
       path: path.join(__dirname, 'public', 'dist'),
       filename: 'bundle.js'
@@ -13,7 +13,7 @@ module.exports = (env) => {
     module: {
       rules:[{
         loader: 'babel-loader',
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: [ /node_modules/ ]
       }, {
         test: /\.s?css$/,

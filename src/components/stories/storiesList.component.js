@@ -27,6 +27,7 @@ export class StoriesList extends React.Component {
 
   componentDidMount() {
     const {onLoadTopStories} = this.props;
+
     onLoadTopStories()
       .then(() => this.setState(prevState => Object.assign(prevState, {
         loading: false
