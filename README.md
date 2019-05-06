@@ -1,4 +1,4 @@
-# HackerNews-API-ReactJS-Sample
+HackerNews API - ReactJS
 
 This is a Web Application in React.JS that is consuming HackerNews REST API. The meain features of this implementation are.
 
@@ -13,8 +13,8 @@ For the reference of the HackerNews REST API go to [https://github.com/HackerNew
 To install this application, first make sure you have [Node.js](https://nodejs.org/en/) properly installed on your system. Then open a bash command line and run the following commands.
 
 ```
-git clone git@github.com:MarceloNunes/HackerNews-API-ReactJS-Sample.git
-cd HackerNews-API-ReactJS-Sample/
+git clone git@github.com:MarceloNunes/hackernewsapi-react.git
+cd hackernewsapi-react
 npm install
 npm run build
 npm run test
