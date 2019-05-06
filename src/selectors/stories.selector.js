@@ -1,6 +1,6 @@
 import axios from 'axios';
 import config from '../../config/config';
-import { fetchTopStoriesAction } from '../actions/stories.actions';
+import {fetchCommentsAction, fetchTopStoriesAction} from '../actions/stories.actions';
 
 export const fetchTopStories = () => async dispatch => {
   const response = await axios.get(config.baseUrl + '/topstories.json');
@@ -16,7 +16,6 @@ const addStories = async topStoriesIds => {
     const story = await fetchItem(topStoriesIds.shift());
 
     if (!story.deleted && !story.dead) {
-      addComments(story);
       stories.push(story);
     }
   }
@@ -27,6 +26,16 @@ const addStories = async topStoriesIds => {
 const fetchItem = async id => {
   const response = await axios.get(config.baseUrl + '/item/' + id + '.json');
   return response && response.data;
+};
+
+export const fetchComments = (stories, storyId) => async dispatch => {
+  const story = stories.find(story => story.id === storyId);
+
+  if (!story.comments) {
+    await addComments(story);
+  }
+
+  dispatch(fetchCommentsAction(stories));
 };
 
 const addComments = async story => {
@@ -43,12 +52,11 @@ const addComments = async story => {
         count++;
 
         if (subItem.kids && subItem.kids.length > 0) {
-          addSubComments(subItem);
+          await addSubComments(subItem);
         }
       }
     }
   };
 
-  return addSubComments(story);
+  await addSubComments(story);
 };
-

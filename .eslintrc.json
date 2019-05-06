@@ -46,6 +46,7 @@
         "jest/prefer-to-have-length": "warn",
         "jest/valid-expect": "error",
         "import/prefer-default-export": "off",
-        "import/no-named-as-default": "off"
+        "import/no-named-as-default": "off",
+        "jsx-a11y/anchor-is-valid": "off"
     }
 }

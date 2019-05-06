@@ -1,9 +1,12 @@
-import {FETCH_TOP_STORIES} from '../actions/actionTypes';
+import {FETCH_COMMENTS, FETCH_TOP_STORIES} from '../actions/actionTypes';
 
 export const StoriesReducer = (state = [], action) => {
-  if (action.type === FETCH_TOP_STORIES) {
+  switch (action.type) {
+  case FETCH_TOP_STORIES :
     return action.stories;
+  case FETCH_COMMENTS:
+    return action.stories;
+  default:
+    return state;
   }
-
-  return state;
 };

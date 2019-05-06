@@ -8,12 +8,13 @@ import {
   Loader,
 } from 'semantic-ui-react';
 
-import {StoryListItem} from './storyListItem.component';
-import {fetchTopStories} from '../../selectors/stories.selector';
+import StoryListItem from './storyListItem.component';
+import {fetchComments, fetchTopStories} from '../../selectors/stories.selector';
 
 
 const mapDispatchToProps = (dispatch) => ({
-  onLoadTopStories: () => dispatch(fetchTopStories())
+  onLoadTopStories: () => dispatch(fetchTopStories()),
+  onLoadComments: (stories, storyId) => dispatch(fetchComments(stories, storyId))
 });
 
 const mapStateToProps = state => ({
@@ -34,8 +35,13 @@ export class StoriesList extends React.Component {
       })));
   }
 
+  handleLoadComments = async (storyId) => {
+    const {stories, onLoadComments} = this.props;
+    await onLoadComments(stories, storyId);
+  };
+
   render() {
-    const {state, props} = this;
+    const {state, props, handleLoadComments} = this;
     const {stories} = props;
     const {loading} = state;
 
@@ -52,7 +58,7 @@ export class StoriesList extends React.Component {
         <List relaxed='very' divided style={{marginBottom: '24px'}}>
           {
             stories && stories.map(story => (
-              <StoryListItem key={story.id} story={story}/>
+              <StoryListItem key={story.id} story={story} onLoadComments={handleLoadComments}/>
             ))
           }
         </List>
